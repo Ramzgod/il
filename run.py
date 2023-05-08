@@ -395,8 +395,8 @@ def menu(my_name,my_id):
 	os.system('clear')
 	banner()
 	ip = requests.get("https://api.ipify.org").text
-	cetak(panel(f'[bold white]Minimal Follow Facebook Gua Dulu Tod',width=32,style=f"bold cyan"))
-	cetak(panel(f'[bold white][+[/][bold white]][/] [bold white]Username : [bold green]{my_name}[/]\n[bold white][+[/][bold white]][/] [bold white]User Idz : [bold green]{my_id}[/]\n[bold white][+[/][bold white]][/] [bold white]User Ip  : [bold green]{ip}[\]\n[bold white][+[/][bold white]][/] [bold white]Status    : [bold green]Private[/][/]',width=42,style=f"bold cyan"))
+	cetak(panel(f'[bold yellow]Xyzon Dev Raja Dari Kegelapan Timur !',width=32,style=f"bold cyan"))
+	cetak(panel(f'[bold white][+[/][bold white]][/] [bold white]Username : [bold green]{my_name}[/]\n[bold white][+[/][bold white]][/] [bold white]User Idz : [bold green]{my_id}[/]\n[bold white][+[/][bold white]][/] [bold white]User Ip  : [bold green]{ip}[\]\n[bold white][+[/][bold white]][/] [bold white]Status   : [bold green]Private[/][/]',width=42,style=f"bold cyan"))
 	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Publick [[bold green] ON [bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Massal [[bold green] ON [bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack Username [[bold green] ON [bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Crack Followers [[bold green] ON [bold white]][/]\n[bold white][[bold green]05[/][bold white]][/] [bold white]Crack Komen [[bold green] ON [bold white]][/]\n[bold white][[bold green]06[/][bold white]][/] [bold white]Chek Hasil Crack [[bold green] ON [bold white]][/]\n[bold white][[bold green]07[/][bold white]][/] [bold white]Chekpoint Detector [[bold green] ON [bold white]][/]\n[bold white][[bold green]08[/][bold white]][/] [bold white]Lacak IP Target [[bold green] ON [bold white]][/]\n[bold white][[bold green]00[/][bold white]][/] [bold red]Hapus Cookies [[bold green] ON [bold white]][/]',width=47,title=f"[bold green]List Menu",style=f"bold cyan"))
 	_____xyzon___xd____ = input(f' ╰─  Pilih Menu Crack : ')
 	if _____xyzon___xd____ in ['1','01']:
@@ -878,11 +878,7 @@ def setting():
 def passwrd():
 	global prog,des
 	print('')
-	urut = []
-	urut.append(panel(f'        [bold green]%s [bold white]'%(okc),width=43,title=f"[bold green]OK SAVE IN",style=f"bold cyan"))
-	urut.append(panel(f'         [bold yellow]%s [bold white]'%(cpc),width=44,title=f"[bold yellow]CP SAVE IN",style=f"bold cyan"))
-	wa.print(Columns(urut))
-	cetak(panel(f'[bold white]On/Off Mode Pesawat Setiap 300 Idz',width=44,title=f"[bold green]Informasi",subtitle=f"[bold green]Proses Crack",style=f"bold cyan"))
+	cetak(panel(f' [bold green]• [bold white]Akun [bold white][[bold green]OK[bold white]][bold cyan] Anda Tersimpan Ke File [bold red]> [bold green]{(okc)} [bold white]\n [bold green]•[bold white] Akun [bold white][[bold yellow]CP[bold white]][bold cyan] Anda Tersimpan Ke File [bold red]> [bold yellow]{(cpc)} ',width=90,title=f"[bold green]![bold white] On/Off Kan Mode Pesawat Jika Tidak Ada Hasil !",style=f"bold cyan"))
 	prog = Progress(SpinnerColumn('smiley'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id2))
 	with prog:
@@ -934,7 +930,7 @@ def crack(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"{P2}[{RW} Rifai-XD {P2}]{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
+	prog.update(des,description=f"{P2}[{RW} ramz {P2}]{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -972,7 +968,7 @@ def crackasync(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"{P2}[{RW} Fai-XD {P2}]{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
+	prog.update(des,description=f"{P2}[{RW} ramz {P2}]{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -1032,7 +1028,7 @@ def crackreguler(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"{P2}[{RW} Fai-XD {P2}]{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
+	prog.update(des,description=f"{P2}[{RW} ramz {P2}]{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -1092,7 +1088,7 @@ def crackmbasic(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"{P2}[{RW} Fai-XD {P2}]{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
+	prog.update(des,description=f"{P2}[{RW} ramz {P2}]{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
