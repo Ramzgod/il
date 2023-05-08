@@ -641,109 +641,12 @@ def result():
 				nocp +=1
 			input('[ Klik Enter ]')
 			back()
-	elif kz in ['3','03']:
+	elif kz in ['3','03']
 		back()
 	else:
 		print(' ╰─  Pilih Yang Bener Kontol ')
 		exit()
-#-----------------[ HASIL-CRACK ]-----------------#
-def result():
-	print(' ╰─ \x1b[1;97mHasil \x1b[1;92mCP \x1b[1;97mAnda \x1b[1;92m01{x} ')
-	print(' ╰─ \x1b[1;97mHasil \x1b[1;92mOK \x1b[1;97mAnda \x1b[1;92m02{x} ')
-	print(' ╰─ Kembali	')
-	kz = input('\n ╰─ Pilih : ')
-	if kz in ['1','01']:
-		try:vin = os.listdir('CP')
-		except FileNotFoundError:
-			print(' ╰─ File Tidak Di Temukan ')
-			time.sleep(3)
-			back()
-		if len(vin)==0:
-			print(' ╰─ Anda Tidak Memiliki Hasil CP ')
-			time.sleep(2)
-			back()
-		else:
-			cih = 0
-			lol = {}
-			for isi in vin:
-				try:hem = open('CP/'+isi,'r').readlines()
-				except:continue
-				cih+=1
-				if cih<10:
-					nom = '0'+str(cih)
-					lol.update({str(cih):str(isi)})
-					lol.update({nom:str(isi)})
-					print('['+nom+'] '+isi+' [ '+str(len(hem))+' Account ]'+x)
-				else:
-					lol.update({str(cih):str(isi)})
-					print('['+str(cih)+'] '+isi+' [ '+str(len(hem))+' Account ]'+x)
-			geeh = input('\ ╰─ Pilih : ')
-			try:geh = lol[geeh]
-			except KeyError:
-				print(' ╰─Pilih Yang Bener Kontol ')
-				exit()
-			try:lin = open('CP/'+geh,'r').read().splitlines()
-			except:
-				print(' ╰─ File Tidak Di Temukan ')
-				time.sleep(2)
-				back()
-			nocp=0
-			for cpku in range(len(lin)):
-				cpkuni=lin[nocp].split('|')
-				cpkuh=f'# ID : {cpkuni[0]} PASSWORD : {cpkuni[1]}'
-				sol().print(mark(cpkuh,style="yellow"))
-				nocp +=1
-			input('[ Klik Enter ]')
-			back()
-	elif kz in ['2','02']:
-		try:vin = os.listdir('OK')
-		except FileNotFoundError:
-			print(' ╰─ File Tidak Di Temukan ')
-			time.sleep(2)
-			back()
-		if len(vin)==0:
-			print(' ╰─ Anda Tidak Mempunyai File OK ')
-			time.sleep(2)
-			back()
-		else:
-			cih = 0
-			lol = {}
-			for isi in vin:
-				try:hem = open('OK/'+isi,'r').readlines()
-				except:continue
-				cih+=1
-				if cih<100:
-					nom = '0'+str(cih)
-					lol.update({str(cih):str(isi)})
-					lol.update({nom:str(isi)})
-					print('['+nom+'] '+isi+' [ '+str(len(hem))+' Account ]'+x)
-				else:
-					lol.update({str(cih):str(isi)})
-					print('['+str(cih)+'] '+isi+' [ '+str(len(hem))+' Account ]'+x)
-			geeh = input('\n ╰─ Pilih : ')
-			try:geh = lol[geeh]
-			except KeyError:
-				print(' ╰─ Pilih Yang Bener Kontol ')
-				exit()
-			try:lin = open('OK/'+geh,'r').read().splitlines()
-			except:
-				print(' ╰─ File Tidak Di Temukan ')
-				time.sleep(2)
-				back()
-			nocp=0
-			for cpku in range(len(lin)):
-				cpkuni=lin[nocp].split('|')
-				cpkuh=f'# ID : {cpkuni[0]} PASSWORD : {cpkuni[1]}'
-				sol().print(mark(cpkuh,style="green"))
-				print(f'{hh}COOKIE : {x}{cpkuni[2]}')
-				nocp +=1
-			input('[ Klik Enter ]')
-			back()
-	elif kz in ['0','00']:
-		back()
-	else:
-		print(' ╰─ Pilih Yang Bener Kontol ')
-		exit()
+
 #-------------------[ CRACK-PUBLIK-MASSAL]----------------#
 def brayen_dump():
 	try:
