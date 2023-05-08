@@ -839,8 +839,8 @@ def setting():
 	else:
 		print(' ╰─  Pilih Yang Bener Kontooll ')
 		exit()
-	cetak(panel(f'[bold white] Cobain Satu Sampai Empat metode nya ',width=50,style=f"bold cyan"))
-	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Metode Mobile New [[bold green]Very Recommended[bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Metode Async [[bold green]Recommended[bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Metode M-Alpha [[bold green]Recommended[bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Metode Mbasic [[bold green]Very Recommended[bold white]][/]',width=47,title=f"[bold green]Setting Metode",style=f"bold cyan"))
+	cetak(panel(f'[bold white]     Cobain Satu Sampai Empat metode nya ',width=50,style=f"bold cyan"))
+	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Metode Mobile New [[bold green]Very Recommended[bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Metode Async [[bold green]Recommended[bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Metode M-Alpha [[bold green]Recommended[bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Metode Mbasic [[bold green]Very Recommended[bold white]][/]',width=50,title=f"[bold green]Setting Metode",style=f"bold cyan"))
 	hc = input(f' ╰─  Pilih Metode : ')
 	if hc in ['1','01']:
 		method.append('async')
@@ -878,7 +878,7 @@ def setting():
 def passwrd():
 	global prog,des
 	print('')
-	cetak(panel(f' [bold green]• [bold white]Akun [bold white][[bold green]OK[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold green]{(okc)} [bold white]\n [bold green]•[bold white] Akun [bold white][[bold yellow]CP[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold yellow]{(cpc)}',width=50,title=f"[bold green]Informasi",subtitle=f"[bold green]On/Off Kan Mode Pesawat Jika Tidak Ada Hasil",style=f"bold cyan"))
+	cetak(panel(f' [bold green]• [bold white]Akun [bold white][[bold green]OK[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold green]{(okc)} [bold white]\n [bold green]•[bold white] Akun [bold white][[bold yellow]CP[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold yellow]{(cpc)}',width=80,title=f"[bold green]Informasi",subtitle=f"[bold green]On/Off Kan Mode Pesawat Jika Tidak Ada Hasil",style=f"bold cyan"))
 	prog = Progress(SpinnerColumn('smiley'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id2))
 	with prog:
