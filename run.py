@@ -641,7 +641,7 @@ def result():
 				nocp +=1
 			input('[ Klik Enter ]')
 			back()
-	elif kz in ['3','03']
+	elif kz in ['3','03']:
 		back()
 	else:
 		print(' ╰─  Pilih Yang Bener Kontol ')
