@@ -720,7 +720,7 @@ def dump_massal():
 #-------------[ PENGATURAN-IDZ ]---------------#
 def setting():
 	print('')
-	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Idz Old [[bold red]Not Recommended[bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Idz New [[bold green]Very Recommended[bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack Idz Random [[bold green]Very Recommended[bold white]][/]',width=47,title=f"[bold green]Setting Urutan Idz",style=f"bold cyan"))
+	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack ID Old [[bold red]Not Recommended[bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack ID New [[bold green]Very Recommended[bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack ID Random [[bold green]Very Recommended[bold white]][/]',width=50,title=f"[bold green]Setting Urutan Idz",style=f"bold cyan"))
 	hu = input(f' ╰─  Pilih Urutan id : ')
 	if hu in ['1','01']:
 		for tua in sorted(id):
@@ -781,7 +781,7 @@ def setting():
 def passwrd():
 	global prog,des
 	print('')
-	cetak(panel(f' [bold green]• [bold white]Akun [bold white][[bold green]OK[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold green]{(okc)} [bold white]\n [bold green]•[bold white] Akun [bold white][[bold yellow]CP[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold yellow]{(cpc)}',width=60,title=f"[bold green]Informasi",subtitle=f"[bold green]On/Off Kan Mode Pesawat Jika Tidak Ada Hasil",style=f"bold cyan"))
+	cetak(panel(f' [bold green]• [bold white]Akun [bold white][[bold green]OK[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold green]{(okc)} [bold white]\n [bold green]•[bold white] Akun [bold white][[bold yellow]CP[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold yellow]{(cpc)}\n',width=60,title=f"[bold green]Informasi",subtitle=f"[bold green]On/Off Kan Mode Pesawat Jika Tidak Ada Hasil",style=f"bold cyan"))
 	prog = Progress(SpinnerColumn('smiley'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id2))
 	with prog:
