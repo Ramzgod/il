@@ -397,7 +397,7 @@ def menu(my_name,my_id):
 	ip = requests.get("https://api.ipify.org").text
 	cetak(panel(f'[bold white]Minimal Follow IG Gw tod',width=32,style=f"bold cyan"))
 	cetak(panel(f'[bold white][+[/][bold white]][/] [bold white]Username : [bold green]{my_name}[/]\n[bold white][+[/][bold white]][/] [bold white]User Idz : [bold green]{my_id}[/]\n[bold white][+[/][bold white]][/] [bold white]User Ip  : [bold green]{ip}[/][/]',width=42,style=f"bold cyan"))
-	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Publick [[bold green] ON [bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Massal [[bold green] ON [bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack Username [[bold green] ON [bold white]][/]\[bold white][[bold green]04[/][bold white]][/] [bold white]Crack Followers [[bold green] ON [bold white]][/]\[bold white][[bold green]05[/][bold white]][/] [bold white]Crack File [[bold green] ON [bold white]][/]\[bold white][[bold green]06[/][bold white]][/] [bold white]Chek Hasil Crack [[bold green] ON [bold white]][/]\[bold white][[bold green]07[/][bold white]][/] [bold white]Crack Chekpoint Detector [[bold green] ON [bold white]][/]\[bold white][[bold green]08[/][bold white]][/] [bold white]Lacak IP Target [[bold green] ON [bold white]][/]\n[bold white][[bold green]00[/][bold white]][/] [bold red]Hapus Cookies [[bold green] ON [bold white]][/]',width=47,title=f"[bold green]List Menu",style=f"bold cyan"))
+	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Publick [[bold green] ON [bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Massal [[bold green] ON [bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack Username [[bold green] ON [bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Crack Followers [[bold green] ON [bold white]][/]\n[bold white][[bold green]05[/][bold white]][/] [bold white]Crack File [[bold green] ON [bold white]][/]\n[bold white][[bold green]06[/][bold white]][/] [bold white]Chek Hasil Crack [[bold green] ON [bold white]][/]\n[bold white][[bold green]07[/][bold white]][/] [bold white]Crack Chekpoint Detector [[bold green] ON [bold white]][/]\n[bold white][[bold green]08[/][bold white]][/] [bold white]Lacak IP Target [[bold green] ON [bold white]][/]\n[bold white][[bold green]00[/][bold white]][/] [bold red]Hapus Cookies [[bold green] ON [bold white]][/]',width=47,title=f"[bold green]List Menu",style=f"bold cyan"))
 	_____xyzon___xd____ = input(f' ╰─  Pilih Menu Crack : ')
 	if _____xyzon___xd____ in ['1','01']:
 		brayen_dump()
@@ -413,7 +413,7 @@ def menu(my_name,my_id):
 		result()
 	elif _____xyzon___xd____ in ['7','07']:
 		file_cp()
-	elif _____xyzon___xd____ in ['7','07']:
+	elif _____xyzon___xd____ in ['8','08']:
 		lacakip()
 	elif _____xyzon___xd____ in ['0','00']:
 		os.system('rm -rf .token.txt')
