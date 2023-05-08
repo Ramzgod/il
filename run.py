@@ -775,7 +775,7 @@ def dump_massal():
 	except IOError:
 		exit()
 	try:
-		cetak(panel('[bold white]Ketik [bold green]Me[/] Jika Ingin Crack Pertemanan Sendiri',width=60,title=f"[bold green]Crack Massal",style=f"bold cyan"))
+		cetak(panel('[bold white]Ketik [bold green]Me[/] Jika Ingin Crack Pertemanan Sendiri',width=65,title=f"[bold green]Crack Massal",style=f"bold cyan"))
 		jum = int(input(f' ╰─  {P}Mau Berapa Idz Target {x} : '))
 	except ValueError:
 		print(' ╰─  Wrong input ')
