@@ -833,7 +833,7 @@ def crack(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"\n- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
+	prog.update(des,description=f"- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -874,7 +874,7 @@ def crackasync(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"\n- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
+	prog.update(des,description=f"- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -937,7 +937,7 @@ def crackreguler(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"\n- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
+	prog.update(des,description=f"- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
@@ -1000,7 +1000,7 @@ def crackmbasic(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	prog.update(des,description=f"\n- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
+	prog.update(des,description=f"- {h}ramz{x} - [bold green][OK[bold red]-:[bold green]{ok}[bold green]][/][bold cyan]-[bold yellow][CP[bold red]-:[bold yellow]{cp}[bold yellow]] [bold cyan]{loop}[bold white]/[bold cyan]{len(id)}[/]")
 	prog.advance(des) 
 	for pw in pwv:
 		try:
