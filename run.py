@@ -768,7 +768,7 @@ def setting():
 	else:
 		pwpluss.append('no')
 		
-	cetak(panel(f'[bold white]Apakah Anda Ingin Gunakan User-Agent Manual Y/T',width=50,title=f"[bold green]Setting User-Agent",style=f"bold cyan"))
+	cetak(panel(f'[bold white] Anda Ingin Gunakan User-Agent Manual Y/T',width=50,title=f"[bold green]Setting User-Agent",style=f"bold cyan"))
 	uatambah = input(f' ╰─  Pilih : ')
 	if uatambah in ['y','Ya','ya','Y']:
 		ualuh.append('ya')
