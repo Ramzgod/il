@@ -552,7 +552,7 @@ def cari_nama(link):
 	
 #-----------------[ HASIL-CRACK ]-----------------#
 def result():
-	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Hasil OK[/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Hasil CP[/]\n[bold white][[bold green]03[/][bold white]][/] [bold red]Kembali[/]',width=90,title=f"[bold white]• [/][bold green]List Menu Cek[/][bold white] •[/]",style=f"bold red"))
+	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Hasil OK[/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Hasil CP[/]\n[bold white][[bold green]03[/][bold white]][/] [bold red]Kembali[/]',width=50,title=f"[bold white]• [/][bold green]List Menu Cek[/][bold white] •[/]",style=f"bold cyan"))
 	kz = input(f'\n {P}[{x}{H}?{x}{P}]{x} {P}select{x} : ')
 	if kz in ['2','02']:
 		try:vin = os.listdir('CP')
