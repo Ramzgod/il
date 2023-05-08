@@ -781,7 +781,7 @@ def setting():
 def passwrd():
 	global prog,des
 	print('')
-	cetak(panel(f' [bold green]• [bold white]Akun [bold white][[bold green]OK[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold green]{(okc)} [bold white]\n [bold green]•[bold white] Akun [bold white][[bold yellow]CP[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold yellow]{(cpc)}',width=80,title=f"[bold green]Informasi",subtitle=f"[bold green]On/Off Kan Mode Pesawat Jika Tidak Ada Hasil",style=f"bold cyan"))
+	cetak(panel(f' [bold green]• [bold white]Akun [bold white][[bold green]OK[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold green]{(okc)} [bold white]\n [bold green]•[bold white] Akun [bold white][[bold yellow]CP[bold white]][bold white] Anda Tersimpan Ke File [bold red]> [bold yellow]{(cpc)}',width=60,title=f"[bold green]Informasi",subtitle=f"[bold green]On/Off Kan Mode Pesawat Jika Tidak Ada Hasil",style=f"bold cyan"))
 	prog = Progress(SpinnerColumn('smiley'),TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id2))
 	with prog:
