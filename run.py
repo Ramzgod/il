@@ -395,7 +395,7 @@ def menu(my_name,my_id):
 	os.system('clear')
 	banner()
 	ip = requests.get("https://api.ipify.org").text
-	cetak(panel(f'[bold yellow]Xyzon Dev Raja Dari Kegelapan Timur !',width=40,style=f"bold cyan"))
+	cetak(panel(f'[bold yellow]Xyzon Dev Raja Dari Kegelapan Timur !',width=41,style=f"bold cyan"))
 	cetak(panel(f'[bold white][+[/][bold white]][/] [bold white]Username : [bold green]{my_name}[/]\n[bold white][+[/][bold white]][/] [bold white]User Idz : [bold green]{my_id}[/]\n[bold white][+[/][bold white]][/] [bold white]User Ip  : [bold green]{ip}\n[bold white][+[/][bold white]][/] [bold white]Status   : [bold green]Private[/][/]',width=42,style=f"bold cyan"))
 	cetak(panel(f'[bold white][[bold green]01[/][bold white]][/] [bold white]Crack Publick [[bold green] ON [bold white]][/]\n[bold white][[bold green]02[/][bold white]][/] [bold white]Crack Massal [[bold green] ON [bold white]][/]\n[bold white][[bold green]03[/][bold white]][/] [bold white]Crack Username [[bold green] ON [bold white]][/]\n[bold white][[bold green]04[/][bold white]][/] [bold white]Crack Followers [[bold green] ON [bold white]][/]\n[bold white][[bold green]05[/][bold white]][/] [bold white]Crack Komen [[bold green] ON [bold white]][/]\n[bold white][[bold green]06[/][bold white]][/] [bold white]Chek Hasil Crack [[bold green] ON [bold white]][/]\n[bold white][[bold green]07[/][bold white]][/] [bold white]Chekpoint Detector [[bold green] ON [bold white]][/]\n[bold white][[bold green]08[/][bold white]][/] [bold white]Lacak IP Target [[bold green] ON [bold white]][/]\n[bold white][[bold green]00[/][bold white]][/] [bold red]Hapus Cookies [[bold green] ON [bold white]][/]',width=47,title=f"[bold green]List Menu",style=f"bold cyan"))
 	_____xyzon___xd____ = input(f' ╰─  Pilih Menu Crack : ')
@@ -775,7 +775,7 @@ def dump_massal():
 	except IOError:
 		exit()
 	try:
-		cetak(panel('[bold white]Ketik [bold green]Me[/] Jika Ingin Crack Pertemanan Sendiri',width=52,title=f"[bold green]Crack Massal",style=f"bold cyan"))
+		cetak(panel('[bold white]Ketik [bold green]Me[/] Jika Ingin Crack Pertemanan Sendiri',width=55,title=f"[bold green]Crack Massal",style=f"bold cyan"))
 		jum = int(input(f' ╰─  {P}Mau Berapa Idz Target {x} : '))
 	except ValueError:
 		print(' ╰─  Wrong input ')
