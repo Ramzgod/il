@@ -453,8 +453,7 @@ def lacakip():
 		print(" [+] Longitude : " + str(response['lon']))
 		print(" [+] ISP : " + response['isp'])
 		print(" [+] Link Google Maps :", google_maps_url)
-		sayangku = input(p+""+P+" ["+P+" Tekan Enter "+P+"] ")
-        back()
+		sayangku = input(p+""+P+" ["+P+" Tekan Enter "+P+"] ");back()
 	else:
 		print(" [+] Alamat IP Yang Dimasukkan Salah")
 ###----------[ CRACK DARI KOMEN ]---------- ###
